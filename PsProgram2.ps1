@@ -60,5 +60,5 @@ $LinqJoinedData = [System.Linq.Enumerable]::Join(
 $OutputArray.count | Write-Host
 
 Measure-Command{
-   Write-Host ($OutputArray.Where({($_.PowerStatus -eq "Offline") -and ($_.ProductionStatus -eq "In Production")})).count
+   Write-Host "Result :"+($OutputArray.Where({($_.PowerStatus -eq "Offline") -and ($_.ProductionStatus -eq "In Production")})).count
 }
